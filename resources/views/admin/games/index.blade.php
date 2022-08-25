@@ -14,6 +14,9 @@
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Delete</button>
                 </form>
+
+                <a href="{{ route('admin.games.edit', ['game' => $game]) }}" class="btn btn-warning">
+
             </li>
         @endforeach
     </ul>
