@@ -84,6 +84,7 @@ class GamesController extends Controller
     {
         $game->delete();
 
-        return redirect()->route('admin.games.index')->with('deleted', 'il post è stato eliminato');
+        return redirect()->route('admin.games.index')->with('deleted', "Il post {$game->title} è stato eliminato");
+
     }
 }
