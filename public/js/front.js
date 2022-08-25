@@ -40227,8 +40227,8 @@ var app = new Vue({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Utente\Desktop\giochi laravel\resources\js\front.js */"./resources/js/front.js");
-module.exports = __webpack_require__(/*! C:\Users\Utente\Desktop\giochi laravel\resources\sass\back.scss */"./resources/sass/back.scss");
+__webpack_require__(/*! C:\Users\Tommaso\Desktop\BOOLEAN\ESERCIZI\laravel-games\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\Users\Tommaso\Desktop\BOOLEAN\ESERCIZI\laravel-games\resources\sass\back.scss */"./resources/sass/back.scss");
 
 
 /***/ })
