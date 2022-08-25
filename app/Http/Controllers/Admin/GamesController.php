@@ -82,6 +82,9 @@ class GamesController extends Controller
      */
     public function destroy(Game $game)
     {
-        //
+        $game->delete();
+
+        return redirect()->route('admin.games.index')->with('deleted', "Il post {$game->title} è stato eliminato");
+
     }
 }
