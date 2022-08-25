@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    <a href="{{ route('admin.games.create')}}">Create</a>
     <ul>
         @foreach ($games as $game)
             <li>

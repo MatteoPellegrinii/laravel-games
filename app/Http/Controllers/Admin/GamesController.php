@@ -26,7 +26,7 @@ class GamesController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.games.create');
     }
 
     /**
@@ -37,7 +37,16 @@ class GamesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $newGame = new Game();
+        $newGame->title = $data['title'];
+        $newGame->description = $data['description'];
+        $newGame->price = $data['price'];
+        $newGame->img = $data['img'];
+        $newGame->save();
+
+        return redirect()->route('admin.games.show', $newGame->id);
+
     }
 
     /**
