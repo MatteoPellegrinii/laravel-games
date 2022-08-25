@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Create new post</h1>
+    <h1>Edit new post</h1>
     <form action="{{ route('admin.games.update', ['game'=> $game])}} " method="post">
 
         @method('PUT')
