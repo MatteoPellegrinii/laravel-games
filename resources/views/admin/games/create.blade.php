@@ -7,10 +7,13 @@
         @csrf
         <label for="">title</label>
         <input type="text" name="title" id="">
+
         <label for="">description</label>
         <input type="text" name="description" id="">
+
         <label for="">price</label>
         <input type="text" name="price" id="">
+
         <label for="">img</label>
         <input type="text" name="img" id="">
 
