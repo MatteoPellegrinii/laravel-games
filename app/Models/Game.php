@@ -6,7 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Game extends Model
 {
+
+    public function user() {
+        return $this->belongsTo('App\Models\User');
+    }
+
     protected $fillable = [
-        'title', 'description', 'price', 'img',
+        'title', 'description', 'price', 'img', 'user_id'
     ];
 }
