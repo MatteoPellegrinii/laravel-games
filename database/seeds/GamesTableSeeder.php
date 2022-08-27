@@ -1,7 +1,9 @@
 <?php
 
 use App\Models\Game;
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Faker\Generator as Faker;
 
 class GamesTableSeeder extends Seeder
 {
@@ -10,7 +12,7 @@ class GamesTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
         $arrGames = [
             [
@@ -54,5 +56,11 @@ class GamesTableSeeder extends Seeder
             Game::create($game);
         }
 
+        // $users_ids = User::all()->pluck('id');
+
+        // for ($i = 0; $i < 5; $i++) {
+        //     $game = new Game;
+        //     $game->user_id = $faker->randomElement($users_ids);
+        // }
     }
 }
