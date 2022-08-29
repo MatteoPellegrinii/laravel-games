@@ -25,7 +25,7 @@ class GamesTableSeeder extends Seeder
                 "img" => "https://m.media-amazon.com/images/I/71ydXZvq+5L._AC_SX466_.jpg",
                 "title" => "Spyro",
                 "price" => 149,
-                "description" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem assumenda accusantium at iure magnam modi totam consectetur? Architecto, laborum hic. Voluptates rem ipsam totam odit unde officiis error excepturi harum."
+                "description" => "Lorem ipsum do lor sit amet consectetur adipisicing elit. Rem assumenda accusantium at iure magnam modi totam consectetur? Architecto, laborum hic. Voluptates rem ipsam totam odit unde officiis error excepturi harum."
             ],
             [
                 "img" => "https://preview.redd.it/z1l0li1qacl41.jpg?auto=webp&s=761eabceb52eff4d0ac33f4c7c264d903f268ba9",
@@ -38,10 +38,9 @@ class GamesTableSeeder extends Seeder
         $userId = User::all()->pluck('id');
 
         foreach ($arrGames as $game) {
-            Game::create($game);
-            $game = new Game;
-            $game->id;
-            $game->user_id = $faker->randomElement($userId);
+            Game::create($game + [
+                'user_id' => $faker->randomElement($userId)
+            ]);
         }
 
         // for ($i = 0; $i < 3; $i++) {
