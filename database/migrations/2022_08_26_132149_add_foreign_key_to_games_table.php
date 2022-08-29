@@ -14,9 +14,14 @@ class AddForeignKeyToGamesTable extends Migration
     public function up()
     {
         Schema::table('games', function (Blueprint $table) {
-            // $table->foreignId('user_id')->constrained();
-            $table->unsignedBigInteger('user_id')->after('id');
-            $table->foreign('user_id')->references('id')->on('users');
+
+            $table->unsignedBigInteger('user_id')->nullable();
+
+            $table->foreign('user_id')
+                    ->references('id')
+                    ->on('users')
+                    ->onDelete('set null');
+
         });
     }
 
@@ -33,3 +38,5 @@ class AddForeignKeyToGamesTable extends Migration
         });
     }
 }
+
+
